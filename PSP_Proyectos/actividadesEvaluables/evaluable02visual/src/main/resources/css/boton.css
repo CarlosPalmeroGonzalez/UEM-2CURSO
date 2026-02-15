@@ -1,0 +1,18 @@
+.boton-azul {
+    -fx-background-color: #1e73ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.boton-azul:hover {
+    -fx-background-color: #1559c9;
+}
+
+.boton-azul:pressed {
+    -fx-background-color: #0e3f91;
+}
