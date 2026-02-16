@@ -1,0 +1,24 @@
+/======================== SESION 02 ========================/
+
+      ENTRADA INFO           SALIDA INFO
+INPUT      ->      PROGRAMA       ->      OUTPUT
+=> Es importante tanto los datos de entrada y salida como los formatos de entrada y salida (no es lo mismo leer un texto plano, que un XML o un JSON)
+
+FLUJOS DE DATOS
+	=> Texto Plano -> .txt "sadsald" 'A' -> 123 (ASCII) 
+	=> Datos Objetos -> Usuario -> Data .obj
+	=> JSON (no deja de ser un Texto Plano) -> [{clave:valor}] -> URL -> .json
+	=> XML (no deja de ser un Texto Plano) -> root -> contenido ó atributos -> .XML
+Empiezan a existir nuevos tipos de intercambiadores de datos como <YAML> pero principalmente los tres grandes son: JSON, XML y CSV.
+
+//===== TEXTO PLANO
+Cuando trabajos como texto plano, trabajamos de dos formas:
+	-> Se trabajan a través de una librería llamada IO -> existe una más actualizada que es NIO.
+
+	=> Lecturas -> File -> FileReader -> BufferedReader
+	=> Escrituras -> File -> FileWriter -> BufferedWriter/PrintWriter
+
+//===== DATA
+En este tipo de flujos de datos lo que guardamos son objetos (un String, un int, un booleano, un objeto...)
+	=> Lecturas -> ObjectInput -> FileInput -> Usuario 1L
+	=> Escrituras -> ObjectOutput -> FileOutput

@@ -1,0 +1,20 @@
+ORM => Nos permiten realizar un mapeado => Esto permite que la gestión contra la base de datos sea de manera más correcta
+
+ORM => Hibernate => HQL
+
+Singleton => getConnection() -> createConnection()
+Connection => El camino de conexion 
+PreparedStatement => query tipada (parametrizo)
+Statement => query plano
+Resultset => select
+
+SessionFactory => Crear una sesion de transacción -> esto ya es único
+Session => me permite transaccionar contra la base de datos
+EntityManager => elementos que me permiten ejecutar "query" contra objetos
+
+Anotaciones
+@Entity => clase
+@Table => persiste a la tabla indicada con el nombre que tiene la clase. No obligatorio
+@Id => indica que este atributo es una PK
+@Colum => indica que este atributo va mapeado contra la base de datos
+@Transient => indica que este atributo no se persiste en la base de datos

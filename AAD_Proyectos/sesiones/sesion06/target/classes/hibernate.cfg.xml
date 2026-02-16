@@ -1,0 +1,15 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="hibernate.connection.driver.class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/hotel_ue</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Hay que mirar lo de poner en la linea 8 "update" para que se actualice/cree la tabla sin destrozar las otras -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+
+        <mapping class="com.example.sesion06.model.Empleado"/>
+        <mapping class="com.example.sesion06.model.Habitacion"/>
+    </session-factory>
+</hibernate-configuration>

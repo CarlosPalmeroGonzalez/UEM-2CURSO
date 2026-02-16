@@ -1,0 +1,48 @@
+/======================== SESION 03 ========================/
+
+[] -> JsonArray
+{} -> JsonObject
+
+[{ // Se guardan los JsonObject en formato de JsonArray para su posible lectura posterior
+	nombre: "Borja",
+	apellido: "Martin",
+	edad: 41,
+	aficciones: ["cine","informatica","lectura]
+},
+{
+	nombre: "Borja",
+	apellido: "Martin",
+	edad: 41,
+	aficciones: ["cine","informatica","lectura]
+}]
+
+// Otra forma de guardar un JSON en una base de datos es de la siguiente forma:
+{
+	results: [{
+		nombre: "Borja",
+		apellido: "Martin",
+		edad: 41,
+		aficciones: ["cine","informatica","lectura]
+	},
+	{
+		nombre: "Borja2",
+		apellido: "Martin2",
+		edad: 45,
+		aficciones: ["cine","informatica","lectura]
+	}]
+}
+
+resultado.results [0].nombre -> Me devuelve un String que seria -> "Borja"
+resultado.results [0].aficiones[i] -> Me devuelve un dato de tipo Array -> []
+dummyjson.com
+
+CLIENTE -> BD (SQL -> MySQL/Postgresql/Oracle) - (NoSQL -> MongoDB)
+(Este es el que estamos utilizando actualmente)
+JDBC -> Java DataBase Conector
+	XAMPP (Apache + MySQL)
+
+
+
+MODELO DE TRES CAPAS:
+	CLIENTE -> SRV -> BD
+	SRV => Servidor de negociado

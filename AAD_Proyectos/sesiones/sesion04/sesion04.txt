@@ -1,0 +1,36 @@
+/======================== SESION 04 ========================/
+CLIENTE ----- xJDBCx ----- BD -> Esto me sive para cualquier base de datos SQL (MySQL, MariaDB, Postgresql, Oracle, SQLServer)
+
+Dependencias necesarias:
+	- Lombok
+	- JDBC
+
+PALABRAS IMPORTANTES:
+	=>	Patrón Singleton
+
+PAQUETES DENTRO DEL PROYECTO MAVEN
+=> controller
+=> model
+=> database 
+	-> Este paquete va a contener el "como se conecta a la base de datos"
+=> dao (data acces object)
+	-> Funciones que se pueden hacer contra BD, separandola de la capa logica
+	-> Es un patron que nos permite escalar la aplicación
+	-> Vamos a llevarlo a lo largo de la asignatura con hibernate y con springboot
+	!!IMP: -> POR CADA MODELO SE TIENE QUE TENER UN DAO ASOCIADO
+	todos los métodos que van hacia la base de datos sobre ese objeto
+	
+
+Cuando trabajamos con base de datos, tenemos tres posibles objetos:
+	Statement (No lo va a utilizar) -> Ejecuta querys sin tipar -> Los tipos son comprobados por el servidor de BD  
+		(Es darle el trabajo a la BD... no es recomendable y tambien es peligroso porque pueden realizar inyecciones de querys)
+	PreparedStatement -> Ejecuta una query tipada -> Los tipos se los doy al servidor de forma correcta 
+		(va parametriza y se ejecuta mas rapido en el servidor)
+		Método para trabajr con PreparedStatemet:
+		=> execute() -> me retorna si hay resulset o no, es decir, si hay un conjunto de elementos o no.
+			=> Suele utilizar: INSERT
+		=> executeUpdate() -> me retorna el número de filas afectadas
+			=> Suele utilizar: UPDATE / DELETE
+	* Nota : Para la obtencion de datos es diferente. Se utiliza el resultset
+	ResultSet => Obtengo la tupla de datos de una tabla. Para ello necesito tener un:
+		-> PreparedStatement -> utilizamos <executyQuery()> -> con lo que obtener un <ResultSet>
